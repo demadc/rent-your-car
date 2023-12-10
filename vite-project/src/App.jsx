@@ -2,12 +2,12 @@ import { BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-// import Layout from "./components/Layout";
-// import Spinner from "./components/Spinner";
+import Layout from "./components/Layout";
+import Spinner from "./components/Spinner";
 
-const HomePage = lazy(() => import("./Components/Home"));
-// const CatalogPage = lazy(() => import("./pages/CatalogPage"));
-// const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
+const HomePage = lazy(() => import("./pages/HomePage"));
+const CatalogPage = lazy(() => import("./pages/CatalogPage"));
+const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
 
 const App = () => {
   return (
@@ -15,9 +15,9 @@ const App = () => {
       <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/favorites" element={<Favorites />} />
+            <Route index element={<HomePage />} />
+            <Route path="/catalog" element={<CatalogPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Route>
         </Routes>
