@@ -1,4 +1,5 @@
 import CardInfoBlock from "./CardInfoBlock";
+import PropTypes from "prop-types";
 
 const CarItem = ({ car }) => {
   const { isOpen, open, close } = useToggle(false);

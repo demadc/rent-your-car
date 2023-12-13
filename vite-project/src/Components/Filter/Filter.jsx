@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 
 import { useUniquePropValues } from "../../shared/hooks";
-import { resetFilter, setFilter } from "../../redux/cars/carsSlice";
+import { resetFilter, setFilter } from "../../Redux/cars/carsSlice";
 import { selectFilter } from "../../redux/cars/carsSelectors";
 import { priceOptions } from "../../shared/utils";
 import Button from "../Button";

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useUniquePropValues } from "../../shared/hooks";
 import { selectFavorites, selectFilter } from "../../redux/cars/carsSelectors";
 
-import { setFilter } from "../../redux/cars/carsSlice";
+import { setFilter } from "../../Redux/cars/carsSlice";
 
 const RadioFilter = ({ open }) => {
   const dispatch = useDispatch();

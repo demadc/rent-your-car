@@ -4,7 +4,7 @@ import { formatedValue } from "../../shared/utils";
 import Separator from "../Separator";
 import { renderItems } from "../../shared/utils/utils";
 
-const CarsInfoBlock = ({ locationData, carData }) => {
+const CardInfoBlock = ({ locationData, carData }) => {
   return (
     <>
       <ul className="card-info-block flex-wrap dark:text-white/50">
@@ -22,9 +22,9 @@ const CarsInfoBlock = ({ locationData, carData }) => {
   );
 };
 
-CarsInfoBlock.propTypes = {
+CardInfoBlock.propTypes = {
   carData: PropTypes.object.isRequired,
   locationData: PropTypes.array.isRequired,
 };
 
-export default CarsInfoBlock;
+export default CardInfoBlock;
